@@ -12,11 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Project',
+            name='Task',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
+                ('title', models.CharField(max_length=150)),
                 ('description', models.TextField(blank=True)),
+                ('status', models.CharField(choices=[('TODO', 'To Do'), ('IN_PROGRESS', 'In Progress'), ('DONE', 'Done')], default='TODO', max_length=20)),
+                ('priority', models.CharField(choices=[('LOW', 'Low'), ('MEDIUM', 'Medium'), ('HIGH', 'High')], default='MEDIUM', max_length=10)),
+                ('dueDate', models.DateField(blank=True, null=True)),
                 ('slug', models.SlugField(editable=False, max_length=180, unique=True)),
                 ('createdAt', models.DateTimeField(auto_now_add=True)),
                 ('updatedAt', models.DateTimeField(auto_now=True)),
