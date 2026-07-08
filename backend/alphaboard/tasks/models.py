@@ -63,6 +63,12 @@ class Task(models.Model):
         editable=False
     )
 
+    list_select_related = (
+        "project",
+        "assignedTo",
+        "createdBy",
+    )
+
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
 

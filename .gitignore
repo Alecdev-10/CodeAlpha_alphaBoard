@@ -1,38 +1,77 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
+# =====================================================
+# Python Virtual Environment
+# =====================================================
 
-# Virtual environment
 alphaBoardEnv/
+.venv/
 venv/
 env/
-.venv/
 
+# =====================================================
 # Django
-db.sqlite3
-media/
-staticfiles/
+# =====================================================
 
-# Environment variables
-.env
+backend/alphaboard/db.sqlite3
 
+backend/alphaboard/media/
+backend/alphaboard/staticfiles/
+
+backend/alphaboard/**/__pycache__/
+backend/alphaboard/**/*.py[cod]
+
+backend/alphaboard/.ruff_cache/
+backend/alphaboard/.pytest_cache/
+backend/alphaboard/.mypy_cache/
+
+backend/alphaboard/.env
+backend/alphaboard/.env.*
+
+# =====================================================
+# React / Vite
+# =====================================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+frontend/.env
+frontend/.env.*
+
+# =====================================================
+# Logs
+# =====================================================
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =====================================================
 # IDE
+# =====================================================
+
 .vscode/
 .idea/
 
-# OS
+# =====================================================
+# Operating System
+# =====================================================
+
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Logs
-*.log
+# =====================================================
+# Coverage / Testing
+# =====================================================
 
-# Python cache
-.pytest_cache/
-.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# Distribution
-build/
-dist/
-*.egg-info/
+# =====================================================
+# Misc
+# =====================================================
+
+*.swp
+*.swo

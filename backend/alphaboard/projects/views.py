@@ -3,7 +3,6 @@ from rest_framework.permissions import IsAuthenticated
 
 
 from .permissions import IsProjectOwner
-from .models import Project
 from .serializers import ProjectSerializer
 from .services import createProject
 
