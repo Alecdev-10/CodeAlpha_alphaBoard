@@ -1,0 +1,42 @@
+import api from "@/api/api";
+
+export async function login(credentials) {
+
+    const response = await api.post(
+        "auth/login/",
+        credentials
+    );
+
+    return response.data;
+}
+
+export async function register(userData) {
+
+    const response = await api.post(
+        "auth/register/",
+        userData
+    );
+
+    return response.data;
+}
+
+export async function getCurrentUser() {
+
+    const response = await api.get(
+        "auth/me/"
+    );
+
+    return response.data;
+}
+
+export async function refreshToken(refresh) {
+
+    const response = await api.post(
+        "auth/token/refresh/",
+        {
+            refresh,
+        }
+    );
+
+    return response.data;
+}
