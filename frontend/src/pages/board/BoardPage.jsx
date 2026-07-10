@@ -63,9 +63,11 @@ const tasks = [
 
 ];
 
-const [openModal, setOpenModal] = useState(false);
 
 export default function BoardPage() {
+
+    const [openModal, setOpenModal] = useState(false);
+
 
     return (
 
