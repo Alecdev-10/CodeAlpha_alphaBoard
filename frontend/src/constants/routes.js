@@ -8,7 +8,7 @@ export const ROUTES = {
 
     dashboard: "/dashboard",
 
-    board: "/projects/:projectSlug",
+    board: "/board",
 
     projects: "/projects",
 
