@@ -1,0 +1,39 @@
+.search-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:280px;
+
+    padding:0 16px;
+
+    border-radius:14px;
+
+    background:var(--surface-2);
+
+}
+
+.search-bar input{
+
+    flex:1;
+
+    height:44px;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    color:var(--text-primary);
+
+}
+
+.search-bar svg{
+
+    color:var(--text-secondary);
+
+}

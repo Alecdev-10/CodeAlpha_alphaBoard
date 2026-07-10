@@ -10,4 +10,8 @@ export const ROUTES = {
 
     board: "/projects/:projectSlug",
 
+    projects: "/projects",
+
+    settings: "/settings",
+
 };

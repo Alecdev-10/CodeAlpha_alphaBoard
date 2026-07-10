@@ -1,0 +1,101 @@
+.task-card{
+
+    position:relative;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--surface-2);
+
+    cursor:pointer;
+
+    transition:all .2s ease;
+
+    overflow:hidden;
+
+}
+
+.task-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 6px 20px rgba(230,57,70,.25);
+
+}
+
+.task-priority{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    width:5px;
+
+}
+
+.task-card h4{
+
+    margin:0;
+
+    color:var(--text-primary);
+
+    font-size:1rem;
+
+}
+
+.task-card p{
+
+    margin:12px 0 18px;
+
+    color:var(--text-secondary);
+
+    font-size:.92rem;
+
+    line-height:1.5;
+
+}
+
+.task-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.task-badge{
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.task-meta{
+
+    display:flex;
+
+    gap:14px;
+
+    color:var(--text-secondary);
+
+    font-size:.82rem;
+
+}
+
+.task-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}

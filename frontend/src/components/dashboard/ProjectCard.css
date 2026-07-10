@@ -1,0 +1,159 @@
+.project-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:all .22s ease;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 28px rgba(230,57,70,.20);
+
+}
+
+.project-banner{
+
+    height:84px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:18px;
+
+}
+
+.project-banner span{
+
+    color:white;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.project-body{
+
+    padding:22px;
+
+}
+
+.project-body h3{
+
+    margin:0;
+
+    color:var(--text-primary);
+
+}
+
+.project-body p{
+
+    margin:12px 0 24px;
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
+
+}
+
+.project-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.progress-track{
+
+    flex:1;
+
+    height:8px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#E63946,#C1121F);
+
+    animation:progressGrow .7s ease;
+
+}
+
+.project-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:24px;
+
+}
+
+.avatars{
+
+    display:flex;
+
+}
+
+.avatars div{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    margin-right:-8px;
+
+    border:2px solid var(--surface);
+
+    background:var(--surface-2);
+
+    color:var(--text-primary);
+
+    font-size:.8rem;
+
+}
+
+.project-footer small{
+
+    color:var(--text-secondary);
+
+}
+
+@keyframes progressGrow{
+
+    from{
+
+        width:0;
+
+    }
+
+}

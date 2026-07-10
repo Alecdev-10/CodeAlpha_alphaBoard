@@ -1,0 +1,37 @@
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:42px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+}
+
+.feature-check{
+
+    color:var(--primary);
+
+}
+
+.feature-icon{
+
+    color:var(--text-muted);
+
+}

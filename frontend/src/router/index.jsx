@@ -7,6 +7,9 @@ import AuthLayout from "@/layouts/AuthLayout";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import BoardPage from "@/pages/board/BoardPage";
+
+
 
 export default function AppRouter() {
 
@@ -45,6 +48,26 @@ export default function AppRouter() {
 
                         </ProtectedRoute>
                     }
+                />
+
+                <Route
+
+                    path={ROUTES.board}
+
+                    element={
+
+                        <ProtectedRoute>
+
+                            <DashboardLayout>
+
+                                <BoardPage />
+
+                            </DashboardLayout>
+
+                        </ProtectedRoute>
+
+                    }
+
                 />
 
             </Routes>

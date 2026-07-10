@@ -1,0 +1,21 @@
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.projects-grid{
+
+    margin-top:34px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
