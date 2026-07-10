@@ -19,11 +19,13 @@ export function AuthProvider({ children }) {
 
     async function loginUser(credentials) {
 
-        const { user, tokens } = await authenticateUser(credentials);
-
-        setUser(user);
+        const tokens = await authenticateUser(credentials);
 
         setTokens(tokens.access, tokens.refresh);
+
+        const user = await getCurrentUser();
+
+        setUser(user);
 
     }
 

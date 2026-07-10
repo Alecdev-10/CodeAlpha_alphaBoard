@@ -4,10 +4,10 @@ import ReactDOM from "react-dom/client";
 import QueryProvider from "./providers/QueryProviders";
 import setupInterceptors from "@/api/setupInterceptors";
 
-import App from "./App";
 import { AuthProvider } from "./contexts/AuthContext";
 
 import "./styles/globals.css";
+import AppRouter from "./router";
 
 setupInterceptors();
 
@@ -17,15 +17,15 @@ ReactDOM.createRoot(
 
     <React.StrictMode>
 
-        <QueryProvider>
+        <AuthProvider>
 
-            <AuthProvider>
+            <QueryProvider>
 
-                <App />
+                <AppRouter />
 
-            </AuthProvider>
+            </QueryProvider>
 
-        </QueryProvider>
+        </AuthProvider>
 
     </React.StrictMode>
     

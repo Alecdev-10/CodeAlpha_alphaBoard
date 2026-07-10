@@ -1,23 +1,18 @@
 import {
     login,
-    getCurrentUser,
+    //getCurrentUser,
 } from "@/api/authApi";
 
 export async function authenticateUser(credentials) {
 
-    const tokens = await login(credentials);
-
-    return {
-        user: await fetchCurrentUser(tokens.access),
-        tokens,
-    };
+    return await login(credentials);
 
 }
 
-async function fetchCurrentUser(accessToken) {
+// async function fetchCurrentUser(accessToken) {
 
-    const user = await getCurrentUser(accessToken);
+//     const user = await getCurrentUser(accessToken);
 
-    return user;
+//     return user;
 
-}
+// }

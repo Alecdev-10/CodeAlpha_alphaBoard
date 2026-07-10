@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 
 import LoadingScreen from "@/components/common/LoadingScreen";
-import useAuth from "@/hooks/useAuth";
+import useAuth from "@/hooks/queries/useAuth";
 
 export default function ProtectedRoute({ children }) {
 
