@@ -1,18 +1,24 @@
 import "./Logo.css";
 
-export default function Logo() {
+export default function Logo(){
 
-    return (
+    return(
 
         <div className="logo">
 
-            <div className="logo__mark"></div>
+            <div className="logo-icon">
 
-            <span className="logo__text">
+                AB
 
-                AlphaBoard
+            </div>
 
-            </span>
+            <div>
+
+                <h2>AlphaBoard</h2>
+
+                <span>Project Workspace</span>
+
+            </div>
 
         </div>
 

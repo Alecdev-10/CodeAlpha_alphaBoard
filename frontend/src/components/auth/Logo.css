@@ -4,39 +4,51 @@
 
     align-items:center;
 
-    gap:14px;
+    gap:16px;
 
-    user-select:none;
-
-}
-
-.logo__mark{
-
-    width:18px;
-
-    height:18px;
-
-    border-radius:50%;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-dark)
-    );
-
-    box-shadow:
-        0 0 18px rgba(230,57,70,.35);
+    margin-bottom:72px;
 
 }
 
-.logo__text{
+.logo-icon{
 
-    color:var(--text-primary);
+    width: 72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    display:grid;
+
+    place-items:center;
 
     font-size:1.5rem;
 
     font-weight:700;
 
-    letter-spacing:-.5px;
+    color:rgb(8, 8, 8);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    box-shadow:0 10px 24px rgba(230,57,70,.28);
+
+}
+
+.logo h2{
+
+    margin:0;
+
+}
+
+.logo span{
+
+    color:var(--text-secondary);
+
+    font-size:.9rem;
 
 }
