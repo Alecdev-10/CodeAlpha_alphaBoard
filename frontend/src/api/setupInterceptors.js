@@ -5,23 +5,28 @@ export default function setupInterceptors() {
 
     api.interceptors.request.use(
 
-        (config) => {
+    (config) => {
 
-            const accessToken = getAccessToken();
+        const accessToken = getAccessToken();
 
-            if (accessToken) {
+        console.log("URL :", config.url);
+        console.log("TOKEN :", accessToken);
 
-                config.headers.Authorization = `Bearer ${accessToken}`;
+        if (accessToken) {
 
-            }
+            config.headers.Authorization = `Bearer ${accessToken}`;
 
-            return config;
+        }
 
-        },
+        console.log(config.headers);
 
-        (error) => Promise.reject(error)
+        return config;
 
-    );
+    },
+
+    (error) => Promise.reject(error)
+
+);
 
     api.interceptors.response.use(
 

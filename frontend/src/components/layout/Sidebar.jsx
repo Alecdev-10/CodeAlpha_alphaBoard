@@ -10,7 +10,8 @@ import {
 
 import Logo from "@/components/auth/Logo";
 import SidebarItem from "./SidebarItem";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import useAuth from "@/hooks/queries/useAuth";
 
 import { ROUTES } from "@/constants/routes";
 
@@ -18,6 +19,9 @@ import "./Sidebar.css";
 
 export default function Sidebar() {
 
+    const navigate = useNavigate();
+    const { logoutUser } = useAuth();
+    
     return (
 
         <aside className="sidebar">
@@ -66,6 +70,7 @@ export default function Sidebar() {
 
                     <NavLink to={ROUTES.projects}>
 
+
                         {({ isActive }) => (
 
                             <SidebarItem
@@ -104,7 +109,12 @@ export default function Sidebar() {
 
             </div>
 
-            <button className="logout-button">
+            <button className="sidebar-logout"
+                onClick={async () => {
+                    await logoutUser();
+                    navigate("/login");
+                }}
+            >
 
                 <LogOut size={18}/>
 

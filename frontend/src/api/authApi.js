@@ -10,14 +10,18 @@ export async function login(credentials) {
     return response.data;
 }
 
-export async function register(userData) {
+export async function register(data) {
 
     const response = await api.post(
-        "auth/register/",
-        userData
+
+        "/auth/register/",
+
+        data
+
     );
 
     return response.data;
+
 }
 
 export async function getCurrentUser() {
@@ -32,7 +36,7 @@ export async function getCurrentUser() {
 export async function refreshToken(refresh) {
 
     const response = await api.post(
-        "auth/token/refresh/",
+        "auth/refresh/",
         {
             refresh,
         }

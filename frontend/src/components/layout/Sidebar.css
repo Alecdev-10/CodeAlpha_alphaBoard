@@ -26,15 +26,19 @@
 
 }
 
-.logout-button{
+.sidebar-logout{
 
+    margin-top: 100px;
+
+    width: auto;
+    
     display:flex;
 
     align-items:center;
 
     gap:12px;
 
-    padding:14px;
+    padding:14px 18px;
 
     border:none;
 
@@ -50,7 +54,7 @@
 
 }
 
-.logout-button:hover{
+.sidebar-logout:hover{
 
     color:var(--primary);
 

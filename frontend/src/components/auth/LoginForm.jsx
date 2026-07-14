@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate, Link, useLocation} from "react-router-dom";
 
 import Button from "@/components/ui/Button/Button";
 import Input from "@/components/ui/Input/Input";
@@ -12,20 +12,34 @@ import "./LoginForm.css";
 export default function LoginForm() {
 
     const navigate = useNavigate();
+    
+    const location = useLocation();
 
     const { loginUser } = useAuth();
 
     const [credentials, setCredentials] = useState({
 
-        email: "",
+        email: location.state?.email ?? "",
 
-        password: "",
+        password: location.state?.password ?? "",
 
     });
 
     const [showPassword, setShowPassword] = useState(false);
 
     const [error, setError] = useState("");
+
+    const buttonRef = useRef(null);
+
+        useEffect(() => {
+
+            if (location.state) {
+
+                buttonRef.current?.focus();
+
+            }
+
+        }, [location.state]);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -65,7 +79,7 @@ export default function LoginForm() {
 
                 error.response?.data?.detail ||
 
-                "Invalid email or password."
+                error.response
 
             );
 
@@ -214,6 +228,8 @@ export default function LoginForm() {
 
                 <Button
 
+                    ref = {buttonRef}
+
                     type="submit"
 
                     disabled={isSubmitting}
@@ -233,6 +249,18 @@ export default function LoginForm() {
                     }
 
                 </Button>
+
+                <p className="auth-switch">
+
+                    Don't have an account yet?
+
+                    <Link to="/register">
+
+                        Create one
+
+                    </Link>
+
+                </p>
 
             </form>
 

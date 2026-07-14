@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState, useCallback } from "react";
 
-import { authenticateUser } from "@/services/authService";
+import { authenticateUser, createUser } from "@/services/authService";
 import { setLogoutHandler } from "@/services/authSession";
 import {
     clearTokens,
@@ -28,6 +28,12 @@ export function AuthProvider({ children }) {
         setUser(user);
 
     }
+
+    async function registerUser(data) {
+    
+        return await createUser(data);
+
+}
 
     const logoutUser = useCallback(() => {
 
@@ -76,6 +82,8 @@ export function AuthProvider({ children }) {
         loading,
 
         loginUser,
+
+        registerUser,
 
         logoutUser,
 
